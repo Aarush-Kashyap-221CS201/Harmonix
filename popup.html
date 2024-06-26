@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Recently Typed URLs</title>
+    <style>
+      * {
+        margin: 2px;
+        padding: 2px;
+      }
+      a {
+        text-decoration: none;  /* no  underline for links */
+        color: inherit;         /* same colour as parent element and not default blue/purple */
+      }
+      body {
+        min-width: 450px;       /* pop up window has min size 450 px */
+        background-color: #1DB954;    /* colour of Spotify icon */
+      }
+      .content {
+        display: flex;      
+        flex-direction: column;  /* place the here's recommended msg and song link (photo+name+by) one after another vertically */
+        align-items: center;     
+        font-size: 1rem;         /* font size set relative to root element (16px default) */
+      }
+      #typedUrl_div {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 1rem;
+        display: flex;          /* horizontal flex box for name+by and image side by side */
+        align-items: center;    
+      }
+      .container {
+        display: flex;
+        flex-direction: column;  /* vertical flex for name and by one after another */
+        align-items: center;
+      }
+      .songcover {
+        height: 80px;
+        width: 80px;      /* configure image as required */
+        padding: 10px;
+      }
+      .song_name {
+        font-weight: bold;    /* make the song name bold */
+      }
+    </style>
+  </head>
+
+  <body>
+     <script src="popup.js"></script>
+     <div class="content">
+      <p>Here's What We Recommend</p>
+      <a href="" id="songlink"><div id="typedUrl_div"></div></a>
+    </div>
+  </body>
+</html>
